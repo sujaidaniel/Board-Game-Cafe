@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <title>The Board Game Cafe</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <style type="text/css">
+    body {
+      background-color: black;
+    }
+
+    a:hover {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .food {
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 15px;
+      width: 50%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .drinks {
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 15px;
+      width: 50%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .gaming {
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 15px;
+      width: 50%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .food:hover {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    }
+
+    .drinks:hover {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 0 10px 0 #33cc33 inset, 0 0 10px 4px #33cc33;
+    }
+
+    .gaming:hover {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 0 10px 0 #ff1a1a inset, 0 0 10px 4px #ff1a1a;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    .btn {
+      background-color: #d9b3ff;
+
+    }
+
+    .panel-footer {
+      margin-top: 50px;
+      background-color: #333333;
+    }
+
+    .panel-footer section {
+      margin-bottom: 30px;
+      text-align: center;
+      color: white;
+    }
+
+    .panel-footer section:nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    .panel-footer section hr {
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myidname">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand">The BoardGame Café</span>
+    </div>
+    <div class="navbar-collapse collapse" id="myidname">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="Drinks.html">Drinks</a>
+        </li>
+        <li>
+          <a href="gaming.html">Gaming</a>
+        </li>
+      </ul>
+    </div>
+    <div class="responsive">
+      <img
+        src="https://lh3.googleusercontent.com/aUyo6G8MXuXJKBD0dQ9j_nksJz8BOglxiZB8yeSHCQyr1JHi7s78HC8sV-8Orsw52VAfbAPZP2AawLYXTtZoyCNOyIs=w1000">
+    </div>
+
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins)   Order is important -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <center>
+    <a href="menu.html"><button class="food"
+        style="background-color: #00ace6">MENU</button></a>
+    <br>
+    <a href="Drinks.html"><button class="drinks"
+        style="background-color: #33cc33">MILKSHAKES &<br>MOCKTAILS</button></a>
+    <br>
+    <a href="gaming.html"><button class="gaming"
+        style="background-color: #ff1a1a">GAMING</button></a>
+  </center>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          (All days) : 12 noon - 12 Midnight
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          Tirumala Estate, 4th Floor, Old MLA Quarters Rd<br>
+          Himayatnagar, Hyderabad, Telangana 500029<br>
+
+          <hr class="visible-xs">
+        </section>
+      </div>
+      <div class="text-center" style="color: white">&copy; Copyright The BoardGame Cafe</div>
+    </div>
+  </footer>
+</body>
+
+</html>

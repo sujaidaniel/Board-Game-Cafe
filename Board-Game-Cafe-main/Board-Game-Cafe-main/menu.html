@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<head>
+    <title>Menu</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)   Order is important -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Amatic SC", sans-serif
+    }
+
+    .menu {
+        display: none;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bgimg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("/w3images/pizza.jpg");
+        min-height: 90%;
+
+    }
+
+    img {
+        border-radius: 25px;
+    }
+
+    .gaimg {
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        min-height: 90%;
+        width: 190 px;
+        border-radius: 25px;
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        float: left;
+        margin: 30px;
+        border-radius: 25px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 25px;
+        margin-bottom: 50px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 25px;
+    }
+
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+        text-align: center;
+
+    }
+
+    .flip-card-back {
+        background-color: rgba(255, 0, 0, 1);
+        color: white;
+        transform: rotateY(180deg);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
+        height: auto;
+        font-size: 22px;
+
+    }
+
+    #vng {
+        float: right;
+        font-size: 15px;
+    }
+
+    #price {
+        float: right;
+    }
+
+    #price_s {
+        float: right;
+        font-size: 20px;
+
+    }
+
+    #category {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    #items {
+        float: left;
+    }
+
+    #items_s {
+        font-size: 20px;
+        float: left;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 70px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 70px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 55px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        font-size: 70px;
+        font-weight: bolder;
+        color: white;
+    }
+</style>
+
+<body style="background-color: black;">
+
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myidname">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand" style="font-family: Arial, Helvetica, sans-serif;"><a href="HomePage.html" style="text-decoration: none; color:white">The BoardGame Café</a></span>
+        </div>
+        <div class="navbar-collapse collapse" id="myidname" style="font-family: Arial, Helvetica, sans-serif;">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="HomePage.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="Drinks.html">Drinks</a>
+                </li>
+                <li>
+                    <a href="gaming.html">Gaming</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Menu Container -->
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" style="background-color: black;" id="menu">
+        <div class="w3-content" style="background-color: black;">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px; background-color: black;">THE MENU</h1>
+
+            <!-- Soups -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://i.pinimg.com/236x/07/c8/65/07c8653a1d93933cdc484b08902d385f.jpg" alt="Soups"
+                            style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered" style="top:45%">Soups</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgba(255, 123, 0, 1);">
+                        <span id="category">Soups</span>
+                        <br><span id="vng">Veg/Non-veg</span>
+                        <br><span id="items">Creame of tomato soup</span><span id="price">₹129</span>
+                        <br><span id="items">Sweet Corn Soup</span><span id="price">₹129</span>
+                        <br><span id="items">Manchow soup</span><span id="price">₹129/149</span>
+                        <br><span id="items">Hot And Sour soup</span><span id="price">₹159</span>
+                        <br><span id="items">Creame Of Mushroom</span><span id="price">₹159</span>
+                        <br><span id="items">Creame Of Brocoli</span><span id="price">₹159</span>
+                        <br><span id="items">Creame Of Chicken</span><span id="price">₹169</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salads -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://image.freepik.com/free-photo/side-view-rice-pouring-delicious-salad-meal-plate-with-chopsticks-wooden-black-background-space-text_176474-3898.jpg"
+                            alt="Salads" style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered" style="top:20%">Salads</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(0, 65, 40);">
+                        <span id="category">Salads</span>
+                        <br><span id="vng">Veg/Non-veg</span>
+                        <br><span id="items">Ceasar Salad</span><span id="price">₹129</span>
+                        <br><span id="items">Russian Salad</span><span id="price">₹129</span>
+                        <br><span id="items">Italian Pasta Salad</span><span id="price">₹129/149</span>
+                        <br><span id="items">MediterraneaN Salad</span><span id="price">₹129/149</span>
+                        <br><span id="items">Boiled Egg Salad</span><span id="price">₹159</span>
+                        <br><span id="items">Grilled Chicken Salad</span><span id="price">₹159</span>
+                        <br><span id="items">Grilled Fish Salad</span><span id="price">₹169</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Bites -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://img.freepik.com/free-photo/top-view-french-fries-with-ketchup-raw-potatoes-black-background_35378-2190.jpg?size=626&ext=jpg"
+                            alt="Quick Bites" style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered" sytle="line-height:10px"><span>Quick</span><br><span>Bites</span>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(22, 38, 71); line-height: 33px;">
+                        <span id="category">Quick Bites</span>
+                        <br><span id="items">French Fries</span><span id="price">₹149</span>
+                        <br><span id="items">PerI PERI FRIES</span><span id="price">₹159</span>
+                        <br><span id="items">CHEESE FRIES</span><span id="price">₹169</span>
+                        <br><span id="items">CHEESE PERI PERI FRIES</span><span id="price">₹179</span>
+                        <br><span id="items">PERI PERI Wedges</span><span id="price">₹149</span>
+                        <br><span id="items">Cheese Chilly Toast</span><span id="price">₹179</span>
+                        <br><span id="items">Cheezy Garlic Bread</span><span id="price">₹179</span>
+                        <br><span id="items">Veg Nachos</span><span id="price">₹189</span>
+                        <br><span id="items">Chicken Nachos</span><span id="price">₹219</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sandwiches -->
+            <div class="flip-card">
+                <div class="flip-card-inner" style="margin-bottom:50px">
+                    <div class="flip-card-front">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/kzmluifv7hrkkssewihq"
+                            alt="Sandwiches" style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered" style="top:70%; line-height:40px;">Sandwiches</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(39, 39, 39); line-height: 30px;">
+                        <span id="category">Sandwiches</span>
+                        <br><span id="items_s"> Veg Club Sandwich</span><span id="price_s">₹169</span>
+                        <br><span id="items_s">Egg & Cheese Sandwich</span><span id="price_s">₹169</span>
+                        <br><span id="items_s">Bombay Sandwich</span><span id="price_s">₹169</span>
+                        <br><span id="items_s">Couch Potato Sandwich</span><span id="price_s">₹169</span>
+                        <br><span id="items_s">Paneer Tikka Sandwich</span><span id="price_s">₹179</span>
+                        <br><span id="items_s">Mushroom Sandwich</span><span id="price_s">₹179</span>
+                        <br><span id="items_s">BBQ Chicken Sandwich</span><span id="price_s">₹189</span>
+                        <br><span id="items_s">Chicken Tikka Sandwich</span><span id="price_s">₹189</span>
+                        <br><span id="items_s">Grilled chicken sandwich</span><span id="price_s">₹189</span>
+                        <br><span id="items_s">Chicken Club Sandwich</span><span id="price_s">₹199</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burgers -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://i.pinimg.com/originals/ce/e4/52/cee452e7a99c5571c6ce793f80090c29.jpg"
+                            alt="Burgers" style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered" style="top:20%">Burgers</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(1, 1, 20);">
+                        <span id="category">Burger</span>
+                        <br><span id="items">Veg Cheese Burger</span><span id="price">₹179</span>
+                        <br><span id="items">Couch Potato Burger</span><span id="price">₹179</span>
+                        <br><span id="items">Mushroom Burger</span><span id="price">₹189</span>
+                        <br><span id="items">Grilled Paneer Burger</span><span id="price">₹189</span>
+                        <br><span id="items">Paneer Tikka Burger</span><span id="price">₹189</span>
+                        <br><span id="items">BBQ Chicken Burger</span><span id="price">₹179</span>
+                        <br><span id="items">Crispy Chicken Burger</span><span id="price">₹199</span>
+                        <br><span id="items">Grilled Chicken Burger</span><span id="price">₹199</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pasta  -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://cafel2l.com/wp-content/uploads/2018/02/Red-Sauce-Pasta-Veg.jpg" alt="Pasta"
+                            style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered">Pasta</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(102, 7, 7); line-height: 50px;">
+                        <span id="category">Pasta</span>
+                        <br><span id="vng">Veg/Non-veg</span>
+                        <br><span id="items">Alfredo Pasta (white)</span><span id="price">₹249/269</span>
+                        <br><span id="items">Arabiatya Pasta (red)</span><span id="price">₹249/269</span>
+                        <br><span id="items">Pink Pasta (mix Sauce)</span><span id="price">₹249/269</span>
+                        <br><span id="items">Pesto Pasta</span><span id="price">₹249/269</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lasagnaa -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://holycowvegan.net/wp-content/uploads/2018/11/classic-lasagna-vegan-7.jpg"
+                            alt="Lasagnaa" style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered" style="top:15%">Lasagnaa</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(53, 28, 4); line-height: 60px;">
+                        <span id="category">Lasagnaa</span>
+                        <br><span id="vng">Veg/Non-veg</span>
+                        <br><span id="items">Alfredo </span><span id="price">₹269/289</span>
+                        <br><span id="items">Arabiatya</span><span id="price">₹269/289</span>
+                        <br><span id="items">Pink Sauce</span><span id="price">₹269/289</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appetizers Veg -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://image.freepik.com/free-photo/vegan-diet-food-grilled-cheese-vegetables-kebab-indian-style-paneer-tikka_136595-4015.jpg"
+                            alt="Appetizers Veg" style="width:300px;height:300px;border-radius: 25px;">
+                        <div class="centered">Appetizers<br>Veg</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(51, 51, 51); line-height: 27px;">
+                        <span id="category">Appetizers Veg</span>
+                        <br><span id="items">Crispy Corn</span><span id="price">₹219</span>
+                        <br><span id="items">Crispy Baby Corn</span><span id="price">₹219</span>
+                        <br><span id="items">Crispy Butter Garlic Mushroom</span><span id="price">₹219</span>
+                        <br><span id="items">Veg Manchuria</span><span id="price">₹219</span>
+                        <br><span id="items">Aloo 65</span><span id="price">₹189</span>
+                        <br><span id="items">Potato/Paneer Fritters</span><span id="price">₹179/219</span>
+                        <br><span id="items">Paneeer Majestic</span><span id="price">₹239</span>
+                        <br><span id="items">Paneer 65</span><span id="price">₹239</span>
+                        <br><span id="items">Chilly Paneer</span><span id="price">₹239</span>
+                        <br><span id="items">Honey Chilly Potatoes</span><span id="price">₹189</span>
+                        <br><span id="items">Falafel (Hummus/Tahini)</span><span id="price">₹239</span>
+                        <br><span id="items">Mini-Wonton Rolls</span><span id="price">₹219</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://image.freepik.com/free-photo/fried-shrimp-appetizer-red-chilli-peppers-sour-cream-wooden-table_334541-70.jpg"
+                            alt="Appetizer(Fish & Prawns)" style="width:300px;height:300px;">
+                        <div class="centered" style="color:rgb(255, 253, 253); top:70px">Appetizers<br>
+                            <div style="font-size:40px">Fish & Prawns</div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(255, 115, 22)">
+                        <span id="category">Fish & Prawns</span>
+                        <br><span id="items">Fish N Chips</span><span id="price">₹309</span>
+                        <br><span id="items">Apollo Fish</span><span id="price">₹309</span>
+                        <br><span id="items">Chilly Fish</span><span id="price">₹309</span>
+                        <br><span id="items">Schezwan Fish</span><span id="price">₹309</span>
+                        <br><span id="items">Golden Prawns</span><span id="price">₹329 </span>
+                        <br><span id="items">Loose Prawns</span><span id="price">₹329 </span>
+                        <br><span id="items">Chilly Prawns</span><span id="price">₹329</span>
+                        <br><span id="items">Masala Prawns</span><span id="price">₹329 </span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://www.thespruceeats.com/thmb/dAKd4HLKBVxPD4G6ZVKBYSqHzWs=/4091x3068/smart/filters:no_upscale()/traditional-chicken-wings-912937-hero-01-6c1a003373a54538a732abc0005145d8.jpg"
+                            alt="Appetizer Chicken" style="width:300px;height:300px;">
+                        <div class="centered" style="color:rgb(255, 253, 253)">Appetizers<br>Chicken</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(31, 150, 20); line-height: 30px;">
+                        <span id="category">Chicken</span>
+                        <br><span id="items">Chicken Wonton Rolls</span><span style="float:right">₹239</span>
+                        <br><span id="items">Chicken Majestic</span><span id="price">₹249</span>
+                        <br><span id="items">Chicken 65</span><span id="price">₹249</span>
+                        <br><span id="items">Pepper Chicken</span><span id="price">₹249</span>
+                        <br><span id="items">Chicken Wild Wings</span><span id="price">₹269</span>
+                        <br><span id="items">Chicken 555</span><span id="price">₹249</span>
+                        <br><span id="items">Drums of Heaven</span><span id="price">₹269</span>
+                        <br><span id="items">Chilly Chicken</span><span id="price">₹249</span>
+                        <br><span id="items">Chicken Saute Stick</span><span id="price">₹249</span>
+                        <br><span id="items">Periperi Chicken Nuggets</span><span id="price">₹249</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://img.freepik.com/free-photo/spaghetti-bolognese-plate-blue_119015-53.jpg?size=626&ext=jpg"
+                            alt="Noodles" style="width:300px;height:300px;">
+                        <div class="centered" style="color:rgb(255, 253, 253)">Noodles</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(17, 20, 54); line-height: 30px;">
+                        <span id="category">Noodles</span>
+                        <br><span id="items">Veg Soft Noodles (pl/sz/ginger)</span><span id="price">₹209</span>
+                        <br><span id="items">Veg Hakka Noodles</span><span id="price">₹209</span>
+                        <br><span id="items">Pan Fried Noodles</span><span id="price">₹209</span>
+                        <br><span id="items">Chilly Garlic Noodles</span><span id="price">₹209</span>
+                        <br><span id="items">Singapore Noodles</span><span id="price">₹219</span>
+                        <br><span id="items">Egg Fried Noodles (pl/sz)</span><span id="price">₹229</span>
+                        <br><span id="items">Chicken Fried Noodles (pl/sz)</span><span id="price">₹239</span>
+                        <br><span id="items">chicken Hakka Noodles</span><span id="price">₹239</span>
+                        <br><span id="items">Chicken Chilly Garlic Noodles</span><span id="price">₹239</span>
+                        <br><span id="items">Chicken Singapore Noodles</span><span id="price">₹249</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://peppertreats.com/wp-content/uploads/2019/09/5d7e40496f4d9-667x570.jpg"
+                            alt="Chopsuey" style="width:300px;height:300px;">
+                        <div class="centered" style="color:rgb(255, 253, 253)">Chopsuey</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(46, 20, 11); line-height: 100px;">
+                        <span id="category">Chopsuey</span>
+                        <br><span id="items">American Chopsuey</span><span id="price">₹249/269</span>
+                        <br><span id="items">Chinese Chopsuey</span><span id="price">₹249/269</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="http://www.greenchillyintl.com/uploads/schezwan_fried_rice.JPG" alt="Rice"
+                            style="width:300px;height:300px;">
+                        <div class="centered" style="color:rgb(255, 253, 253)">Rice</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(48, 48, 48); ">
+                        <span id="category">Rice</span>
+                        <br><span id="items">Veg Fried Rice (pl/sz/ginger)</span><span id="price">₹209</span>
+                        <br><span id="items">Paneer Fried Rice (pl/sz/ginger)</span><span id="price">₹229</span>
+                        <br><span id="items">Burnt CH GL Frieds Rice</span><span id="price">₹209</span>
+                        <br><span id="items">Egg Fried Rice (pl/sz)</span><span id="price">₹229</span>
+                        <br><span id="items">Chicken Fried Rice (pl/sz)</span><span id="price">₹239</span>
+                        <br><span id="items">Chicken Burnt CH GL Rice</span><span id="price">₹239</span>
+                        <br><span id="items">Special Fried Rice</span><span id="price">₹249</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://www.twinskirasoi.in/wp-content/uploads/2020/08/Schezwan-Chilli-Chicken-Gravy.jpg"
+                            alt="Appetizer" style="width:300px;height:300px;">
+                        <div class="centered">Gravy</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color:rgb(255, 51, 0)">
+                        <span id="category">Gravy</span>
+                        <br><span id="items">Veg manchuria</span><span id="price">₹209</span>
+                        <br><span id="items">Veg Schezuan</span><span id="price">₹209</span>
+                        <br><span id="items">Paneer Hot & Garlic</span><span id="price">₹229</span>
+                        <br><span id="items">Chilly Paneer</span><span id="price">₹229</span>
+                        <br><span id="items">Chicken Manchuria</span><span id="price">₹239</span>
+                        <br><span id="items">Chicken Schezwan</span><span id="price">₹239</span>
+                        <br><span id="items">Slice Chicken Hot & Garlic</span><span id="price">₹239</span>
+                        <br><span id="items">Chilly Chicken</span><span id="price">₹239</span> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Slow-Cooker-Chicken-Stroganoff_EXPS_THEDSCODR19_132155_C03_01_3b_rms.jpg"
+                            alt="Appetizer" style="width:300px;height:300px;">
+                        <div class="centered" style="color:rgb(255, 253, 253); top:50px;">MainCourse</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color:rgb(57, 136, 103); line-height:60px;">
+                        <span id="category">MainCourse</span>
+                        <br><span id="items">Veg Stroganof</span><span id="price">₹299</span>
+                        <br><span id="items">Chicken Stroganof</span><span id="price">₹349</span>
+                        <br><span id="items">Grilled Chicken Steak</span><span id="price">₹349</span>
+                        <br><span id="items">Baked Fish</span><span id="price">₹369</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://media.istockphoto.com/photos/pizza-margherita-on-black-background-pizza-margarita-with-tomatoes-picture-id1172354639?k=6&m=1172354639&s=170667a&w=0&h=a9MG9YvaVwCF4hGO_bQR4B_JN0yVhFvG_Jv1MI5vuRU="
+                            alt="Pizza" style="width:300px;height:300px;">
+                        <div class="centered" style="top:28px">Pizza</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color:rgb(119, 61, 37)">
+                        <span id="category">Pizza</span>
+                        <br><span id="items">Veggie delight</span> <span id="price">₹259</span>
+                        <br><span id="items">Plain Cheese Margarita</span><span id="price">₹259</span>
+                        <br><span id="items">Exotica BBQ Mexcian</span><span id="price">₹289</span>
+                        <br><span id="items">Veg Supreme</span><span id="price">₹289</span>
+                        <br><span id="items">Paneer Tikka</span><span id="price">₹299</span>
+                        <br><span id="items">Chicken Delight</span><span id="price">₹299</span>
+                        <br><span id="items">Chicken B.B.Q</span><span id="price">₹309</span>
+                        <br><span id="items">Chicken Tikka</span><span id="price">₹309</span>
+                        <br><span id="items">American Pepproni</span><span id="price">₹319</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/garimasgautam-gmail.com/Schezwan_Chicken_Sizzler_Platter.jpg"
+                            alt="Sizzlers" style="width:300px;height:300px;">
+                        <div class="centered">Sizzlers</div>
+                    </div>
+                    <div class="flip-card-back" style="line-height: 25px; background-color: rgb(37, 44, 80);">
+                        <span id="category">Sizzler</span>
+                        <b><br><span id="items_s" style="font-size:25px;">Sizzler(Veg/Paneer Grilled)</span></b><span
+                            id="price_s">₹349/379</span>
+                        <br><span id="items_s" style="font-size:22px;">Sauce Options : </span>
+                        <br><span id="items_s">Alferdo Sauce</span>
+                        <br><span id="items_s">Mushroom Pepper Sauce</span>
+                        <br><span id="items_s">BBQ Sauce </span>
+                        <br><span id="items_s">Schezwan Sauce</span>
+                        <b><br><span id="items_s" style="font-size:25px;">Sizzler(Chicken/Fish)</span></b><span
+                            id="price_s">₹379/399</span>
+                        <br><span id="items_s" style="font-size:22px;">Sauce Options : </span>
+                        <br><span id="items_s">Alferdo Sauce</span>
+                        <br><span id="items_s">Mushroom Pepper Sauce </span>
+                        <br><span id="items_s">Bbq Sauce</span>
+                        <br><span id="items_s">Schezwan Sauce </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://merryabouttown.com/wp-content/uploads/2016/08/Fudgy-Chocolate-Waffles-720x540.jpg"
+                            alt="Waffles" style="width:300px;height:300px;">
+                        <div class="centered" style="top:135px;">Waffles</div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: rgb(53, 161, 102);">
+                        <span id="category">Waffles</span>
+                        <br><span id="items_s">Honey / Maple</span><span id="price_s">₹129</span>
+                        <br><span id="items_s">Butter Stoctch N Banana</span><span id="price_s">₹139</span>
+                        <br><span id="items_s">Almond N Cocoa Butter</span><span id="price_s">₹149</span>
+                        <br><span id="items_s">Strawberry Cream Cheese</span><span id="price_s">₹149</span>
+                        <br><span id="items_s">Peanut Butter N Chocolate</span><span id="price_s">₹149</span>
+                        <br><span id="items_s">Coffee Waffle</span><span id="price_s">₹139</span>
+                        <br><span id="items_s">Dak N White Fantasy</span><span id="price_s">₹149</span>
+                        <br><span id="items_s">Tripple Chocolate</span><span id="price_s">₹159</span>
+                        <br><span id="items_s">Chocolate Over Load</span><span id="price_s">₹149</span>
+                        <br><span id="items_s">Nutella Overload</span><span id="price_s">₹159</span>
+                        <br><span id="items_s">Mixed Nuts Waffle</span><span id="price_s">₹199</span>
+                        <br><span id="items_s">Fruit Overload</span><span id="price_s">₹219</span>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
