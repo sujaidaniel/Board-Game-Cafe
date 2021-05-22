@@ -1,2 +1,2 @@
-# Board-Game-Cafe
-We have developed a realtime Menu page for a restaurant.
+# Board-Game 
+Developed a realtime Menu page for a restaurant.
